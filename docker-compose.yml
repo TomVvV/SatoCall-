@@ -1,0 +1,10 @@
+version: '3'
+services:
+  voice-wallet:
+    build: .
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./tls.cert:/app/tls.cert
